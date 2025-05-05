@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Anúncios - Zarah Semijoias (Abril 2025)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif; /* Fonte padrão sugerida */
+            background-color: #f9fafb; /* Fundo cinza claro */
+        }
+        .chart-container {
+            position: relative;
+            margin: auto;
+            height: 300px; /* Altura padrão para gráficos */
+            width: 100%;
+            max-width: 600px; /* Largura máxima para melhor leitura */
+            margin-bottom: 2rem; /* Espaçamento inferior */
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb; /* Linha abaixo dos títulos h2 */
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            margin-top: 2rem; /* Espaçamento superior */
+            font-size: 1.5rem; /* Tamanho do título da seção */
+            font-weight: 600; /* Peso da fonte */
+            color: #1f2937; /* Cor do título */
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem; /* Tamanho do subtítulo */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-bottom: 1.5rem;
+            border-collapse: collapse; /* Remove espaço entre bordas */
+        }
+        th, td {
+            border: 1px solid #e5e7eb; /* Borda cinza clara */
+            padding: 0.75rem; /* Espaçamento interno */
+            text-align: left; /* Alinhamento à esquerda */
+            font-size: 0.875rem; /* Tamanho da fonte da tabela */
+        }
+        th {
+            background-color: #f3f4f6; /* Fundo cinza claro para cabeçalho */
+            font-weight: 600; /* Negrito para cabeçalho */
+        }
+        td {
+            background-color: #ffffff; /* Fundo branco para células */
+        }
+        .analysis-text {
+            background-color: #eff6ff; /* Fundo azul claro para texto de análise */
+            border-left: 4px solid #3b82f6; /* Borda azul à esquerda */
+            padding: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: #1e40af; /* Cor do texto de análise */
+            border-radius: 0.375rem; /* Cantos arredondados */
+        }
+        .summary-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            margin-bottom: 1rem;
+        }
+         /* Responsividade para tabelas */
+        .table-container {
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="p-4 md:p-8">
+
+    <header class="mb-8 text-center">
+        <h1 class="text-3xl font-bold text-gray-800">Zarah Semijoias</h1>
+        <p class="text-xl text-gray-600">Relatório de Desempenho de Anúncios</p>
+        <p class="text-md text-gray-500">Período: 01 de Abril de 2025 a 30 de Abril de 2025</p>
+    </header>
+
+    <main class="container mx-auto max-w-6xl">
+
+        <section id="resumo-geral">
+            <h2>Resumo Geral das Campanhas</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div class="summary-card text-center">
+                    <p class="text-sm font-medium text-gray-500">Investimento Total</p>
+                    <p class="text-2xl font-semibold text-gray-800">R$ 2.417,79</p>
+                </div>
+                <div class="summary-card text-center">
+                    <p class="text-sm font-medium text-gray-500">Total de Conversas*</p>
+                    <p class="text-2xl font-semibold text-gray-800">505</p>
+                     <p class="text-xs text-gray-400">*(Soma das conversas das campanhas WHP e Inter)</p>
+                </div>
+                 <div class="summary-card text-center">
+                    <p class="text-sm font-medium text-gray-500">Total de Cadastros*</p>
+                    <p class="text-2xl font-semibold text-gray-800">79</p>
+                     <p class="text-xs text-gray-400">*(Da campanha Lead LP Revenda)</p>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Campanha</th>
+                            <th>Alcance</th>
+                            <th>Impressões</th>
+                            <th>Valor Gasto</th>
+                            <th>Resultado Principal</th>
+                            <th>Qtd. Resultado</th>
+                            <th>Custo por Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Revenda Zap: wp - conv - revenda - ddos - inter - 27/01/25</td>
+                            <td>10.916</td>
+                            <td>26.435</td>
+                            <td>R$ 361,17</td>
+                            <td>Conversa por Mensagem</td>
+                            <td>86</td>
+                            <td>R$ 4,20</td>
+                        </tr>
+                        <tr>
+                            <td>Revenda LP: lead-lp-revenda-ddos-22/04</td>
+                            <td>25.776</td>
+                            <td>85.584</td>
+                            <td>R$ 918,63</td>
+                            <td>Cadastro Concluído (Lead)</td>
+                            <td>79</td> <td>R$ 11,97</td> </tr>
+                        <tr>
+                            <td>Varejo:[ENG ][VAREJO] [WHP] 11/01/2025</td>
+                            <td>44.589</td>
+                            <td>158.738</td>
+                            <td>R$ 1.078,46</td>
+                            <td>Conversa por Mensagem</td>
+                            <td>419</td>
+                            <td>R$ 2,57</td>
+                        </tr>
+                        <tr class="font-semibold bg-gray-50">
+                             <td>Total</td>
+                            <td>81.281</td>
+                            <td>270.757</td>
+                            <td>R$ 2.417,79</td>
+                            <td>-</td>
+                            <td>505 Conv. / 26 Cad.</td>
+                            <td>Variado</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Distribuição do Investimento por Campanha</h3>
+            <div class="chart-container">
+                <canvas id="investimentoCampanhaChart"></canvas>
+            </div>
+
+            <h3>Resultados por Campanha</h3>
+            <div class="chart-container">
+                <canvas id="resultadosCampanhaChart"></canvas>
+            </div>
+
+             <h3>Custo por Resultado por Campanha</h3>
+            <div class="chart-container">
+                <canvas id="custoResultadoCampanhaChart"></canvas>
+            </div>
+
+            <div class="analysis-text">
+                <strong>Análise Geral:</strong> A campanha `[ENG ][VAREJO] [WHP]` representou o maior investimento (R$ 1.078,46) e gerou o maior volume de resultados (419 conversas) com o menor custo por conversa (R$ 2,57). A campanha `lead-lp-revenda-ddos` focou em leads, gerando 26 cadastros a um custo médio de R$ 11,97 por cadastro (detalhado na seção específica). A campanha `wp - conv - revenda` teve um custo por conversa intermediário (R$ 4,20).
+            </div>
+        </section>
+
+        <section id="detalhe-eng-varejo">
+            <h2>Detalhes: Campanha [ENG ][VAREJO] [WHP] 11/01/2025</h2>
+            <p class="mb-4 text-gray-600">Objetivo Principal: Conversas por Mensagem</p>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Conjunto de Anúncios</th>
+                            <th>Alcance</th>
+                            <th>Valor Gasto</th>
+                            <th>Conversas</th>
+                            <th>Custo por Conversa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>[10] WHP-PERS [fotogravação] 16/04</td><td>28.098</td><td>R$ 217,42</td><td>252</td><td>R$ 0,86</td></tr>
+                        <tr><td>[06] WHP-PERS [pulseira] 28/03</td><td>23.059</td><td>R$ 448,92</td><td>108</td><td>R$ 4,16</td></tr>
+                        <tr><td>[05] WHP-PERSONALIZADO[]</td><td>13.627</td><td>R$ 173,79</td><td>37</td><td>R$ 4,70</td></tr>
+                        <tr><td>[07] WHP-PS][DIA DAS MÃES]04/05 -- Cópia</td><td>8.020</td><td>R$ 176,92</td><td>18</td><td>R$ 9,83</td></tr>
+                        <tr><td>[08] WHP-BRINCO [DENT] 07-04</td><td>1.964</td><td>R$ 29,90</td><td>3</td><td>R$ 9,97</td></tr>
+                        <tr><td>[09] WHP-PERS/MÃES] [ITENS] 12/04</td><td>1.626</td><td>R$ 31,51</td><td>1</td><td>R$ 31,51</td></tr>
+                         <tr class="font-semibold bg-gray-50">
+                             <td>Total (Conjuntos Visíveis)</td>
+                            <td>76.434</td>
+                            <td>R$ 1.078,46</td>
+                            <td>419</td>
+                            <td>R$ 2,57 (Média)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Conversas por Conjunto de Anúncios</h3>
+            <div class="chart-container">
+                <canvas id="conversasEngVarejoChart"></canvas>
+            </div>
+            <h3>Custo por Conversa por Conjunto de Anúncios</h3>
+            <div class="chart-container">
+                <canvas id="custoEngVarejoChart"></canvas>
+            </div>
+
+            <div class="analysis-text">
+                <strong>Análise (ENG VAREJO WHP):</strong> O conjunto `[10]...fotogravação` foi o grande destaque, responsável pela maioria das conversas (252) com um custo extremamente baixo (R$ 0,86). Os conjuntos `[06]...pulseira` e `[05]...PERSONALIZADO` tiveram desempenho intermediário. Os demais conjuntos apresentaram custos por conversa significativamente mais altos (acima de R$ 9), indicando menor eficiência e potencial necessidade de otimização ou pausa.
+            </div>
+        </section>
+
+        <section id="detalhe-lead-lp">
+            <h2>Detalhes: Campanha lead-lp-revenda-ddos-22/04</h2>
+             <p class="mb-4 text-gray-600">Objetivo Principal: Cadastros Concluídos (Leads para Revenda)</p>
+			 <p class="mb-4 text-gray-600">Esse gráfico é apenas da nova campanha após a reunião com o Matheus com as alterações sugeridas</p>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Conjunto de Anúncios</th>
+                            <th>Alcance</th>
+                            <th>Valor Gasto</th>
+                            <th>Cadastros Concluídos</th>
+                            <th>Custo por Cadastro</th>
+                            <th>Conversas (Secundário)</th>
+                            <th>Custo por Conversa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>LEAD - LP - DDOS - INTERS -(PROF+BELEZA&gt; PIXEL...</td>
+                            <td>7.117</td>
+                            <td>R$ 163,60</td>
+                            <td>12</td>
+                            <td>R$ 13,63</td>
+                            <td>3</td>
+                            <td>R$ 54,53</td>
+                        </tr>
+                        <tr>
+                            <td>LEAD - LP - DDOS - ADV (ABERTO M/PIXEL/REV) - 22...</td>
+                            <td>7.393</td>
+                            <td>R$ 147,50</td>
+                            <td>14</td>
+                            <td>R$ 10,54</td>
+                            <td>1</td>
+                            <td>R$ 147,50</td>
+                        </tr>
+                         <tr class="font-semibold bg-gray-50">
+                             <td>Total (Conjuntos Visíveis)</td>
+                            <td>11.943</td> <td>R$ 311,10</td>
+                            <td>26</td>
+                            <td>R$ 11,97 (Média)</td>
+                            <td>4</td>
+                             <td>R$ 77,78 (Média)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Cadastros por Conjunto de Anúncios</h3>
+            <div class="chart-container">
+                <canvas id="cadastrosLeadLpChart"></canvas>
+            </div>
+            <h3>Custo por Cadastro por Conjunto de Anúncios</h3>
+            <div class="chart-container">
+                <canvas id="custoLeadLpChart"></canvas>
+            </div>
+
+            <div class="analysis-text">
+                <strong>Análise (Lead LP Revenda):</strong> Esta campanha gerou 79 cadastros (leads) a um custo médio de R$ 11,97 por lead. O conjunto `ADV (ABERTO)` teve um custo por lead ligeiramente menor (R$ 10,54) e gerou mais leads (14). O conjunto `INTERS` teve um custo por lead de R$ 13,63. É importante avaliar a qualidade desses leads e o valor de conversão para determinar se esses custos são adequados. A métrica "Custo por Conversa" parece secundária ou calculada de forma diferente nesta campanha, sendo significativamente mais alta.
+            </div>
+        </section>
+
+         <section id="detalhe-wp-conv">
+            <h2>Detalhes: Campanha wp - conv - revenda - ddos - inter - 27/01/25</h2>
+            <p class="mb-4 text-gray-600">Objetivo Principal: Conversas por Mensagem</p>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Métrica</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Alcance</td><td>10.916</td></tr>
+                        <tr><td>Impressões</td><td>26.435</td></tr>
+                        <tr><td>Valor Gasto</td><td>R$ 361,17</td></tr>
+                        <tr><td>Conversas por Mensagem</td><td>86</td></tr>
+                        <tr><td>Custo por Conversa</td><td>R$ 4,20</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="analysis-text">
+                <strong>Análise (WP Conv Revenda):</strong> O desempenho geral mostra 86 conversas a um custo de R$ 4,20 por conversa. 
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="mt-12 text-center text-sm text-gray-500">
+        Relatório gerado em <span id="generationDate"></span>.
+    </footer>
+
+    <script>
+        // --- Configuração dos Gráficos ---
+
+        // Cores padrão para os gráficos
+        const defaultColors = [
+            '#3b82f6', // blue-500
+            '#10b981', // emerald-500
+            '#f59e0b', // amber-500
+            '#ec4899', // pink-500
+            '#8b5cf6', // violet-500
+            '#6366f1', // indigo-500
+            '#06b6d4', // cyan-500
+        ];
+
+        // Dados Resumo Geral
+        const resumoCampanhaLabels = ['WP Conv Revenda', 'Lead LP Revenda', 'ENG VAREJO WHP'];
+        const resumoInvestimentoData = [361.17, 918.63, 1378.46];
+        const resumoResultadosConversasData = [86, 0, 419]; // Separando resultados
+        const resumoResultadosCadastrosData = [0, 26, 0];
+        const resumoCustoResultadoData = [4.20, 11.97, 2.57]; // Usando Custo/Cadastro para Lead LP
+        const resumoCustoResultadoLabels = ['Custo/Conversa', 'Custo/Cadastro', 'Custo/Conversa'];
+
+        // Dados ENG VAREJO WHP
+        const engVarejoLabels = ['Fotogravação', 'Pulseira', 'Personalizado', 'Dia Mães Cópia', 'Brinco', 'Vários Itens'];
+        const engVarejoConversasData = [252, 108, 37, 18, 3, 1];
+        const engVarejoCustoData = [0.86, 4.16, 4.70, 9.83, 9.97, 31.51];
+
+        // Dados Lead LP Revenda
+        const leadLpLabels = ['INTERS (PROF+BELEZA)', 'ADV (ABERTO)'];
+        const leadLpCadastrosData = [12, 14];
+        const leadLpCustoCadastroData = [13.63, 10.54]; // Custo por Cadastro calculado
+
+        // --- Criação dos Gráficos ---
+
+        // Gráfico: Investimento por Campanha (Pizza)
+        new Chart(document.getElementById('investimentoCampanhaChart'), {
+            type: 'pie',
+            data: {
+                labels: resumoCampanhaLabels,
+                datasets: [{
+                    label: 'Valor Gasto (R$)',
+                    data: resumoInvestimentoData,
+                    backgroundColor: defaultColors,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: { display: false }, // Título já está no H3
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed !== null) {
+                                    label += new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(context.parsed);
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Gráfico: Resultados por Campanha (Barras Agrupadas)
+        new Chart(document.getElementById('resultadosCampanhaChart'), {
+            type: 'bar',
+            data: {
+                labels: resumoCampanhaLabels,
+                datasets: [
+                    {
+                        label: 'Conversas por Mensagem',
+                        data: resumoResultadosConversasData,
+                        backgroundColor: defaultColors[0],
+                        borderColor: defaultColors[0],
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Cadastros Concluídos',
+                        data: resumoResultadosCadastrosData,
+                        backgroundColor: defaultColors[1],
+                        borderColor: defaultColors[1],
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: { beginAtZero: true, title: { display: true, text: 'Quantidade' } },
+                    x: { title: { display: true, text: 'Campanha' } }
+                },
+                 plugins: { title: { display: false } }
+            }
+        });
+
+         // Gráfico: Custo por Resultado por Campanha (Barras)
+        new Chart(document.getElementById('custoResultadoCampanhaChart'), {
+            type: 'bar',
+            data: {
+                labels: resumoCampanhaLabels,
+                datasets: [{
+                    label: 'Custo por Resultado (R$)', // Legenda ajustada
+                    data: resumoCustoResultadoData,
+                    backgroundColor: defaultColors,
+                    borderColor: defaultColors,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: { beginAtZero: true, title: { display: true, text: 'Custo (R$)' } },
+                    x: { title: { display: true, text: 'Campanha' } }
+                },
+                 plugins: {
+                     title: { display: false },
+                     tooltip: {
+                        callbacks: {
+                            // Adiciona o tipo de resultado ao tooltip
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label = resumoCustoResultadoLabels[context.dataIndex] + ': '; // Usa o label específico
+                                }
+                                if (context.parsed.y !== null) {
+                                    label += new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(context.parsed.y);
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                 }
+            }
+        });
+
+        // Gráfico: Conversas por Conjunto (ENG VAREJO WHP)
+        new Chart(document.getElementById('conversasEngVarejoChart'), {
+            type: 'bar',
+            data: {
+                labels: engVarejoLabels,
+                datasets: [{
+                    label: 'Conversas por Mensagem',
+                    data: engVarejoConversasData,
+                    backgroundColor: defaultColors,
+                    borderColor: defaultColors,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                indexAxis: 'y', // Barras horizontais para melhor leitura dos labels
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: { beginAtZero: true, title: { display: true, text: 'Quantidade' } },
+                    y: { ticks: { autoSkip: false } } // Garante que todos os labels apareçam
+                },
+                 plugins: { title: { display: false } }
+            }
+        });
+
+        // Gráfico: Custo por Conversa por Conjunto (ENG VAREJO WHP)
+        new Chart(document.getElementById('custoEngVarejoChart'), {
+            type: 'bar',
+            data: {
+                labels: engVarejoLabels,
+                datasets: [{
+                    label: 'Custo por Conversa (R$)',
+                    data: engVarejoCustoData,
+                    backgroundColor: defaultColors,
+                    borderColor: defaultColors,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                 indexAxis: 'y', // Barras horizontais
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: { beginAtZero: true, title: { display: true, text: 'Custo (R$)' } },
+                     y: { ticks: { autoSkip: false } }
+                },
+                 plugins: { title: { display: false } }
+            }
+        });
+
+         // Gráfico: Cadastros por Conjunto (Lead LP)
+        new Chart(document.getElementById('cadastrosLeadLpChart'), {
+            type: 'bar',
+            data: {
+                labels: leadLpLabels,
+                datasets: [{
+                    label: 'Cadastros Concluídos',
+                    data: leadLpCadastrosData,
+                    backgroundColor: defaultColors.slice(0, 2), // Usa as 2 primeiras cores
+                    borderColor: defaultColors.slice(0, 2),
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: { beginAtZero: true, title: { display: true, text: 'Quantidade' } },
+                    x: { title: { display: true, text: 'Conjunto de Anúncios' } }
+                },
+                 plugins: { title: { display: false } }
+            }
+        });
+
+         // Gráfico: Custo por Cadastro por Conjunto (Lead LP)
+        new Chart(document.getElementById('custoLeadLpChart'), {
+            type: 'bar',
+            data: {
+                labels: leadLpLabels,
+                datasets: [{
+                    label: 'Custo por Cadastro (R$)',
+                    data: leadLpCustoCadastroData,
+                     backgroundColor: defaultColors.slice(0, 2),
+                    borderColor: defaultColors.slice(0, 2),
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                     y: { beginAtZero: true, title: { display: true, text: 'Custo (R$)' } },
+                    x: { title: { display: true, text: 'Conjunto de Anúncios' } }
+                },
+                 plugins: { title: { display: false } }
+            }
+        });
+
+        // --- Outros Scripts ---
+        // Data de geração no rodapé
+        document.getElementById('generationDate').textContent = new Date().toLocaleDateString('pt-BR');
+
+    </script>
+
+</body>
+</html>
